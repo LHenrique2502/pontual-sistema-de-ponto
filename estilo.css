@@ -1,0 +1,49 @@
+
+/*Formatação do menu*/
+
+div#menu {
+    display: block;
+    
+    
+}
+
+div#menu ul{
+    list-style-type: none;
+    margin: -10px 0px 0px -10px;
+    padding: 0;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    background-color: #141A37;
+    border: 5px solid red;
+    text-align: center;
+}
+
+div#menu li {
+    display: inline-block;
+}
+
+div#menu li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    font-family: 'h Hadir Sans', sans-serif;
+    padding: 20px 15px;
+    width: 260px;
+}
+
+div#menu li :hover {
+    background-color: rgb(243, 241, 241);
+    color: #141A37;
+}
+
+.active { /*deixa a página que está ativa com uma cor diferente*/
+    background-color: #00C899;
+    color: white;
+}
+
+img {
+    padding-bottom: 20px;
+}
