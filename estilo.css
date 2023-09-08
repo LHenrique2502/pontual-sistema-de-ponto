@@ -47,3 +47,29 @@ div#menu li :hover {
 img {
     padding-bottom: 20px;
 }
+
+section#cabecalho {
+    display: block;
+    width: auto;
+    float: inline-start;
+    padding-left: 330px;
+}
+
+section#cabecalho p {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+section#funcionarios-ativos {
+    display: block;
+    width: 600px;
+    float: left;
+    padding-left: 330px;
+}
+
+aside#sua-atividade {
+    display: block;
+    width: 400px;
+    float: right;
+    padding-right: 40px;
+}
