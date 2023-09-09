@@ -61,15 +61,13 @@ section#cabecalho p {
 }
 
 section#funcionarios-ativos {
-    display: block;
-    width: 600px;
     float: left;
     padding-left: 330px;
+    margin-top: 10px;
 }
 
 aside#sua-atividade {
-    display: block;
-    width: 400px;
     float: right;
-    padding-right: 40px;
+    padding-right: 100px;
+    
 }
