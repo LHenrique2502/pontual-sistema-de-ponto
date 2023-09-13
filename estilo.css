@@ -1,49 +1,39 @@
 
 /*Formatação do menu*/
 
-div#menu {
+nav#menu {
     display: block;
+    margin: -32px -8px;
 }
 
-div#menu ul{
+nav#menu ul{ /*Formatação da li menu*/
     list-style-type: none;
-    margin: -10px 0px 0px -10px;
-    padding: 0;
+    padding: 0%;
     width: 300px;
     height: 100%;
-    position: fixed;
+    position: absolute;
     overflow: auto;
     background-color: #141A37;
     text-align: center;
 }
 
-div#menu ul li {
-    display: inline-block;
-}
-
-div#menu li a {
+nav#menu li a {
     color: white;
     text-decoration: none;
     display: block;
     font-family: 'h Hadir Sans', sans-serif;
     padding: 20px 15px;
-    width: 260px;
 }
 
-div#menu li :hover {
+nav#menu li :hover {
     background-color: white;
     color: #141A37;
 }
 
 /*Sub menu*/
-div#menu ul ul {
+nav#menu ul ul {
     display: none;
     position: relative;
-}
-
-div#menu ul li :hover ul {
-    display: block;
-    
 }
 
 .active { /*deixa a página que está ativa com uma cor diferente*/
