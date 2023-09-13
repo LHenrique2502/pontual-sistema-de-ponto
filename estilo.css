@@ -3,8 +3,6 @@
 
 div#menu {
     display: block;
-    
-    
 }
 
 div#menu ul{
@@ -16,18 +14,16 @@ div#menu ul{
     position: fixed;
     overflow: auto;
     background-color: #141A37;
-    border: 5px solid red;
     text-align: center;
 }
 
-div#menu li {
+div#menu ul li {
     display: inline-block;
 }
 
 div#menu li a {
     color: white;
     text-decoration: none;
-    text-transform: uppercase;
     display: block;
     font-family: 'h Hadir Sans', sans-serif;
     padding: 20px 15px;
@@ -35,8 +31,19 @@ div#menu li a {
 }
 
 div#menu li :hover {
-    background-color: rgb(243, 241, 241);
+    background-color: white;
     color: #141A37;
+}
+
+/*Sub menu*/
+div#menu ul ul {
+    display: none;
+    position: relative;
+}
+
+div#menu ul li :hover ul {
+    display: block;
+    
 }
 
 .active { /*deixa a página que está ativa com uma cor diferente*/
