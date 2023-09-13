@@ -1,27 +1,31 @@
-
+/*resetar o documento*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /*Formatação do menu*/
 
 nav#menu {
-    display: block;
-    margin: -32px -8px;
+    background-color: #141A37;
+    width: 300px;
+    height:100vh;
 }
 
 nav#menu ul{ /*Formatação da li menu*/
-    list-style-type: none;
-    padding: 0%;
-    width: 300px;
-    height: 100%;
-    position: absolute;
-    overflow: auto;
-    background-color: #141A37;
     text-align: center;
+    font-family: 'h Hadir Sans', sans-serif;
+}
+
+nav#menu ul li{
+    display: inline;
+    position: relative;
 }
 
 nav#menu li a {
     color: white;
     text-decoration: none;
     display: block;
-    font-family: 'h Hadir Sans', sans-serif;
     padding: 20px 15px;
 }
 
@@ -31,9 +35,25 @@ nav#menu li :hover {
 }
 
 /*Sub menu*/
-nav#menu ul ul {
+nav#menu ul ul { /*ocultar os menus suspensos*/
     display: none;
-    position: relative;
+    position: absolute;
+}
+
+nav#menu ul li:hover ul { /*mostrar os itens*/
+    display:block;
+}
+
+nav#menu ul ul {
+    width: 200px;
+    background-color: rgb(228, 228, 228);
+    margin-left: 300px;
+    position: absolute;
+    top: 0px;
+}
+
+nav#menu ul ul li a {
+    display: block;
 }
 
 .active { /*deixa a página que está ativa com uma cor diferente*/
@@ -66,5 +86,5 @@ section#funcionarios-ativos {
 aside#sua-atividade {
     float: right;
     padding-right: 100px;
-    
 }
+
