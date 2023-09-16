@@ -34,31 +34,20 @@ nav#menu li :hover {
     color: #141A37;
 }
 
-/*Sub menu*/
-nav#menu ul ul { /*ocultar os menus suspensos*/
+/*Formatação do dropdown*/
+
+nav#menu ul ul {
     display: none;
     position: absolute;
 }
 
-nav#menu ul li:hover ul { /*mostrar os itens*/
-    display:block;
-}
-
-nav#menu ul ul { /*configurações do*/
+nav#menu ul li:hover ul {
+    display: inline-block;
+    margin-left: 150px;
     width: 200px;
+    top: 0;
     background-color: #141A37;
     color: white;
-    margin-left: 300px;
-    position: absolute;
-    top: 0px;
-}
-
-nav#menu ul ul li a {
-    display: block;
-}
-
-nav#menu ul ul a{
-    padding: 10px;
 }
 
 .active { /*deixa a página que está ativa com uma cor diferente*/
