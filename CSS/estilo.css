@@ -44,9 +44,10 @@ nav#menu ul li:hover ul { /*mostrar os itens*/
     display:block;
 }
 
-nav#menu ul ul {
+nav#menu ul ul { /*configurações do*/
     width: 200px;
-    background-color: rgb(228, 228, 228);
+    background-color: #141A37;
+    color: white;
     margin-left: 300px;
     position: absolute;
     top: 0px;
@@ -54,6 +55,10 @@ nav#menu ul ul {
 
 nav#menu ul ul li a {
     display: block;
+}
+
+nav#menu ul ul a{
+    padding: 5px;
 }
 
 .active { /*deixa a página que está ativa com uma cor diferente*/
