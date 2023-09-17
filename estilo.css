@@ -1,11 +1,11 @@
-/*resetar o documento*/
+                                    /*resetar o documento*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*Formatação do menu*/
+                                    /*Formatação do menu*/
 nav#menu {
     background-color: #141A37;
     width: 300px;
@@ -13,7 +13,7 @@ nav#menu {
     
 }
 
-nav#menu ul{ /*Formatação da li menu*/
+nav#menu ul{                        /*Formatação da li menu*/
     text-align: center;
     font-family: 'h Hadir Sans', sans-serif;
 }
@@ -35,7 +35,7 @@ nav#menu li :hover {
     color: #141A37;
 }
 
-/*Formatação do dropdown*/
+                                /*Formatação do dropdown*/
 
 nav#menu ul ul {
     display: none;
@@ -51,7 +51,7 @@ nav#menu ul li:hover ul {
     color: white;
 }
 
-.active { /*deixa a página que está ativa com uma cor diferente*/
+.active {           /*deixa a página que está ativa com uma cor diferente*/
     background-color: #00C899;
     color: white;
 }
@@ -60,14 +60,41 @@ img {
     padding-bottom: 20px;
 }
 
-/*Formatação do cabeçalho*/
-div#cabecalho {
-    border: solid red;
-    width: 50%;
+                                /*Formatação do cabeçalho*/
+
+header {
     position: absolute;
     top: 0;
-    left: 310px;
+    left: 300px;
+    width: 1200px;
+    margin: 10px 0px 0px 10px;
+}
+
+p {
+    width: 30%;
+    position: absolute;
+    top: 0;
+    left: 0px;
     font-weight: bolder;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    width: 15%;
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+div.conteudo {
+    position: absolute;
+    border: solid red;
+    top: 100px;
+    left: 300px;
+    width: 1200px;
+    margin: 10px 0px 0px 10px;
 }
