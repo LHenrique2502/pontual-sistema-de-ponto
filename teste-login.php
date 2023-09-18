@@ -8,7 +8,7 @@
         $email = $_POST['email'];
         $senha = $_POST['senha'];
 
-        print_r('Email: ' . $_email);
+        print_r('Email: ' . $email);
         print_r('Senha: ' . $senha);
     }
     else
