@@ -36,12 +36,11 @@
                         <label for="telefone" class="labelInput">Telefone</label>
                     </div><br>
                     <div id="form_registro">Perfil</div>
-                        <input type="radio" id="administrador" nome="perfil" value="administrador" required>
-                        <label for="administrador">Administrador</label><br>
-                        <input type="radio" id="usuario" nome="perfil" value="usuario" required>
-                        <label for="usuario">Usuário</label><br>
-                        <input type="radio" id="visualizador" nome="perfil" value="visualizador" required>
-                        <label for="visualizador">Visualizador</label><br>
+                        <select name="perfil" id="perfil">
+                            <option value="administrador">Administrador</option>
+                            <option value="usuario">Usuário</option>
+                            <option value="visualizador">Visualizador</option>
+                        </select>
                     <div class="inputBox">
                         <label for="data_nascimento"><b>Data de Nascimento</b></label>
                         <input type="date" name="data_nascimento" id="data_nascimento" class="inputUser" required>
