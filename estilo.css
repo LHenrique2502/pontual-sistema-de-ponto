@@ -77,13 +77,102 @@
     position: relative;
     width: 450%;
     margin-left: 170%;
-    background-color: #00C899;
+    background-color: #00eeb6;
     color: white;
     border: none;
     border-radius: 10px;
     padding: 10px 0px;
 }
 
+#button_login:hover{
+    background-color: #00C899;
+    cursor: pointer;
+}
+
+                                    /*Página de registro*/
+
+#form_registro{
+    top: none;
+}
+
+#direito_registro{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    border-radius: 15px;
+    width: 50%;
+    color: white;
+}
+
+fieldset{
+    border: 3px solid #00C899;
+}
+
+legend{
+    border: 1px solid #00C899;
+    padding: 10px;
+    text-align: center;
+    background-color: #00C899;
+    border-radius: 8px;
+}
+
+.inputBox{
+    position: relative;
+}
+
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.labelInput{
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
+    color: #00C899;
+}
+
+#data_nascimento{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+}
+
+#submit{
+    width: 100%;
+    background-color: #00eeb6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 0px;
+}
+
+#submit:hover{
+    background-color: #00C899;
+    cursor: pointer;
+}
                                     /*Formatação do menu*/
 nav#menu {
     background-color: #141A37;
