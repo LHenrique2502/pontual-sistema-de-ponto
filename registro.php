@@ -6,7 +6,7 @@
         //print_r('<br>');
         //print_r('Email:' . $_POST['email']);
         //print_r('<br>');
-        //print_r('Telefone:' . $_POST['telefone']);
+        //print_r('Senha:' . $_POST['senha']);
         //print_r('<br>');
         //print_r('Perfil:' . $_POST['perfil']);
         //print_r('<br>');
@@ -22,14 +22,14 @@
 
         $nome = $_POST['nome'];
         $email = $_POST['email'];
-        $telefone = $_POST['telefone'];
+        $senha = $_POST['senha'];
         $perfil = $_POST['perfil'];
         $data_nasc = $_POST['data_nascimento'];
         $cidade = $_POST['cidade'];
         $estado = $_POST['estado'];
         $endereco = $_POST['endereco'];
 
-        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,telefone,perfil,data_nasc,cidade,estado,endereco) VALUES ('$nome','$email','$telefone','$perfil','$data_nasc','$cidade','$estado','$endereco')");
+        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,senha,perfil,data_nasc,cidade,estado,endereco) VALUES ('$nome','$email','$senha','$perfil','$data_nasc','$cidade','$estado','$endereco')");
     }
 
 ?>
@@ -44,7 +44,7 @@
 
 <body>
     <div id="esquerda">
-        <img id="img_login" src="_imagens/Logo-tela-login.png" width="500px">
+        <img id="img_login" src="_imagens/Logo-tela-login-novo.png " width="400px">
     </div>
 
     <div id="direito">
@@ -69,8 +69,8 @@
                         <label for="email" class="labelInput">E-mail</label>
                     </div><br>
                     <div class="inputBox">
-                        <input type="tel" name="telefone" id="telefone" class="inputUser" required>
-                        <label for="telefone" class="labelInput">Telefone</label>
+                        <input type="password" name="senha" id="senha" class="inputUser" required>
+                        <label for="senha" class="labelInput">Senha</label>
                     </div><br>
                     <div id="form_registro">Perfil</div>
                         <select name="perfil" id="perfil">

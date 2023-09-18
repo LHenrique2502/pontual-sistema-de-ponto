@@ -9,7 +9,7 @@
 
 <body>
     <div id="esquerda">
-        <img id="img_login" src="_imagens/Logo-tela-login.png" width="500px">
+        <img id="img_login" src="_imagens/Logo-tela-login-novo.png" width="400px">
     </div>
 
     <div id="direito">
@@ -22,11 +22,11 @@
         </div>
 
         <div id="direito_login">
-            <form>
+            <form action="testeLogin.php" method="POST">
                 <label id="label_login" for="usuario">E-mail:</label><br>
-                <input id="input_login" type="text" id="usuario" name="usuario"><br><br><br>
+                <input id="input_login" type="text" id="usuario" name="email" placeholder="Email"><br><br><br>
                 <label id="label_login" for="senha">Senha:</label><br>
-                <input id="input_login" type="password" id="senha" name="senha"><br><br><br><br>
+                <input id="input_login" type="password" id="senha" name="senha" placeholder="Senha"><br><br><br><br>
                 <input id="button_login" type="submit" value="Login">
             </form>
         </div>
