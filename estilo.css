@@ -115,7 +115,7 @@
     transform: translate(-50%, -28%);
     padding: 10px;
     border-radius: 15px;
-    width: 100%;
+    width: 70%;
     height: 100%;
     color: black;
 }
@@ -182,12 +182,13 @@ legend{
 }
 
 #submit{
-    width: 100%;
+    width: 60%;
     background-color: #00eeb6;
     color: white;
     border: none;
     border-radius: 10px;
     padding: 10px 0px;
+    margin-left: 15%;
 }
 
 #submit:hover{
