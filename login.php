@@ -22,12 +22,12 @@
         </div>
 
         <div id="direito_login">
-            <form action="testeLogin.php" method="POST">
+            <form action="teste-login.php" method="POST">
                 <label id="label_login" for="usuario">E-mail:</label><br>
                 <input id="input_login" type="text" id="usuario" name="email" placeholder="Email"><br><br><br>
                 <label id="label_login" for="senha">Senha:</label><br>
                 <input id="input_login" type="password" id="senha" name="senha" placeholder="Senha"><br><br><br><br>
-                <input id="button_login" type="submit" value="Login">
+                <input id="button_login" type="submit" value="Enviar">
             </form>
         </div>
     </div>
