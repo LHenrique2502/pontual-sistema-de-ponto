@@ -16,7 +16,9 @@
         <div id="cabecalho_login">
                 <br><br><br>
                 <div id="texto_login">Login</div><br>
-                <div id="texto_login_2">Registre - se para se conectar</div>
+                <div id="texto_login_2">
+                    <a href="registro.php">Registre - se para se conectar</a>
+                </div>
         </div>
 
         <div id="direito_login">

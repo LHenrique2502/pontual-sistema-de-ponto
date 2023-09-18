@@ -51,7 +51,9 @@
         <div id="cabecalho_login">
                 <br><br><br>
                 <div id="texto_login">Registre - se</div><br>
-                <div id="texto_login_2">Entre com seu login</div>
+                <div id="texto_login_2">
+                    <a href="login.php">Entre com seu login</a>
+                </div>
         </div>
 
         <div id="direito_registro">
