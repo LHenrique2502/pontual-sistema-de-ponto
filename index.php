@@ -34,7 +34,7 @@
                     <li><a href="cadastro_empresa.html"></a>Empresa</li>
                     <li><a href="cadastro_horarios.html"></a>Horários</li>
                     <li><a href="cadastro_funcionarios.html"></a>Funcionários</li>
-                    <li><a href="cadastro_usuarios.html"></a>Usuários</li>
+                    <li><a href="cadastro_usuarios.php"></a>Usuários</li>
                 </ul>
             </li>
             <li><a href="#">Manutenções</a>

@@ -86,7 +86,7 @@
 #button_login {
     position: relative;
     width: 450%;
-    margin-left: 170%;
+    margin-left: 270%;
     background-color: #00eeb6;
     color: white;
     border: none;
@@ -266,8 +266,9 @@ header {
     position: absolute;
     top: 0;
     left: 300px;
-    width: 80%;
+    width: 79%;
     margin: 10px 0px 0px 10px;
+    border-bottom: 1px red;
 }
 
 p {
@@ -292,11 +293,11 @@ input#pesquisar {
 
 div.conteudo {
     position: absolute;
-    border: solid red;
     top: 100px;
     left: 300px;
-    width: 1200px;
+    width: 79%;
     margin: 10px 0px 0px 10px;
+    background: none;
 }
 
 a#logout {
@@ -309,4 +310,27 @@ a#logout {
     border-radius: 10px;
   }
 
-  
+  div.conteudoCadastro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -40%);
+    width: 50%;
+    background: none;
+  }
+
+  #update {
+      position: absolute;
+      width: 30%;
+      margin-left: 30%;
+      background-color: #00eeb6;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 0px;
+  }
+
+  #update:hover{
+      background-color: #00C899;
+      cursor: pointer;
+  }
