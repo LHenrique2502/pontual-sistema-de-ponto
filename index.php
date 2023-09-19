@@ -28,7 +28,7 @@
     <nav id="menu">                                     <!--Menu lateral-->
         <ul>
            <img id="logo_menu" src="_imagens/Logo-menu-lateral.png" width="200px">
-            <li><a class="active" href="index.html">Dashboard</a></li>
+            <li><a class="active" href="index.php">Dashboard</a></li>
             <li><a href="#">Cadastros</a>
                 <ul class="dropdown">
                     <li><a href="cadastro_empresa.html"></a>Empresa</li>
