@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    // print_r($_SESSION);
+    if((!isset($_SESSION['email']) == true) and (!isset ($_SESSION['senha']) == true))
+    {
+        unset($_SESSION['email']);
+        unset($_SESSION['senha']);
+        header('Location: login.php');
+    }
+    $logado = $_SESSION['email'];
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -8,9 +19,11 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="estilo.css">
     <link href="https://fonts.cdnfonts.com/css/h-hadir-sans" rel="stylesheet">
+    
 </head>
 
 <body>
+    
 
     <nav id="menu">                                     <!--Menu lateral-->
         <ul>
@@ -39,15 +52,21 @@
    </nav>
 
     <header>                                        <!--cabeçalho-->
-        <p>Bem Vindo, Lucas!</p>                    <!--Bem vindo usuário-->
+        <?php
+            echo "<p>Bem vindo <u>$logado</u></p>";
+        ?><!--Bem vindo usuário-->
         <form>
             <input id="pesquisar" type="text" id="pesquisar" name="pesquisar" placeholder="Pesquisar...">
         </form>
+        <div>
+            <a href="sair.php" id="logout" >Logout</a>          <!--botão de logout-->
+        </div>
     </header>
 
-    <div class="conteudo">
+    <div class="conteudo">                          <!--Conteudo do site-->
         Conteudo
     </div>
+     
 </body>
 
-</html>
+</html> 

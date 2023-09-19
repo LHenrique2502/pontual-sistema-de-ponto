@@ -74,6 +74,15 @@
     font-size: 14px;
 }
 
+#input_senha {
+    width: 70%;
+    position: absolute;
+    padding: 12px;
+    border: 2px solid rgb(184, 182, 182);
+    border-radius: 6px;
+    font-size: 14px;
+}
+
 #button_login {
     position: relative;
     width: 450%;
@@ -177,7 +186,7 @@ legend{
     outline: none;
     background-color: white;
     color: rgb(0, 0, 0);
-    font-size: 15px;
+    font-size: 12px;
     width: 20%;
     margin-left: 10%;
 }
@@ -257,7 +266,7 @@ header {
     position: absolute;
     top: 0;
     left: 300px;
-    width: 1200px;
+    width: 80%;
     margin: 10px 0px 0px 10px;
 }
 
@@ -273,8 +282,8 @@ p {
 
 input#pesquisar {
     width: 15%;
-    position: absolute;
-    right: 0;
+    position:absolute;
+    right: 150px;
     padding: 10px;
     border: 2px solid rgb(184, 182, 182);
     border-radius: 6px;
@@ -289,3 +298,15 @@ div.conteudo {
     width: 1200px;
     margin: 10px 0px 0px 10px;
 }
+
+a#logout {
+    background-color: #f55348;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+    border-radius: 10px;
+  }
+
+  

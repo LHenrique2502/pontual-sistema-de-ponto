@@ -2,21 +2,21 @@
 
     if(isset($_POST['submit']))
     {
-        //print_r('Nome:' . $_POST['nome']);
-        //print_r('<br>');
-        //print_r('Email:' . $_POST['email']);
-        //print_r('<br>');
-        //print_r('Senha:' . $_POST['senha']);
-        //print_r('<br>');
-        //print_r('Perfil:' . $_POST['perfil']);
-        //print_r('<br>');
-        //print_r('Data de nascimento:' . $_POST['data_nascimento']);
-        //print_r('<br>');
-        //print_r('Cidade:' . $_POST['cidade']);
-        //print_r('<br>');
-        //print_r('Estado:' . $_POST['estado']);
-        //print_r('<br>');
-        //print_r('Endereço:' . $_POST['endereco']);
+        // print_r('Nome:' . $_POST['nome']);
+        // print_r('<br>');
+        // print_r('Email:' . $_POST['email']);
+        // print_r('<br>');
+        // print_r('Senha:' . $_POST['senha']);
+        // print_r('<br>');
+        // print_r('Perfil:' . $_POST['perfil']);
+        // print_r('<br>');
+        // print_r('Data de nascimento:' . $_POST['data_nascimento']);
+        // print_r('<br>');
+        // print_r('Cidade:' . $_POST['cidade']);
+        // print_r('<br>');
+        // print_r('Estado:' . $_POST['estado']);
+        // print_r('<br>');
+        // print_r('Endereço:' . $_POST['endereco']);
 
         include_once('config.php');
 
@@ -30,6 +30,8 @@
         $endereco = $_POST['endereco'];
 
         $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,senha,perfil,data_nasc,cidade,estado,endereco) VALUES ('$nome','$email','$senha','$perfil','$data_nasc','$cidade','$estado','$endereco')");
+
+        header('Location: login.php');
     }
 
 ?>
