@@ -81,7 +81,7 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
    <div class="conteudoCadastro">
-            <form action="saveEdit.php" method="POST">
+            <form action="saveEditEmpresa.php" method="POST">
                 <fieldset>
                     <div class="inputBox">
                         <input type="text" name="nome" id="nome" class="inputUser" value="<?php echo $nome ?>" required>

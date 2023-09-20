@@ -7,7 +7,7 @@
 
         $id = $_GET['id'];
 
-        $sqlSelect = "SELECT * FROM usuarios WHERE id=$id";
+        $sqlSelect = "SELECT * FROM funcionarios WHERE id=$id";
 
         $result = $conexao->query($sqlSelect);
 
@@ -16,27 +16,26 @@
             while($user_data = mysqli_fetch_assoc($result))
             {
                 $nome = $user_data['nome'];
-                $email = $user_data['email'];
-                $senha = $user_data['senha'];
-                $perfil = $user_data['perfil'];
-                $data_nasc = $user_data['data_nasc'];
-                $cidade = $user_data['cidade'];
-                $estado = $user_data['estado'];
-                $endereco = $user_data['endereco'];
+                $pis = $user_data['pis'];
+                $cpf = $user_data['cpf'];
+                $empresa = $user_data['empresa'];
+                $admissao = $user_data['admissao'];
+                $horario = $user_data['horario'];
+                $funcao = $user_data['funcao'];
             }
             
             
         }
         else
         {
-            header('Location: cadastro_usuarios.php');
+            header('Location: cadastro_funcionarios.php');
         }
 
         
 
     }
     else{
-        header('Location: cadastro_usuarios.php');
+        header('Location: cadastro_funcionarios.php');
     }
 
 ?>
@@ -48,7 +47,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Edição de funcionários</title>
     <link rel="stylesheet" href="estilo.css">
     <link href="https://fonts.cdnfonts.com/css/h-hadir-sans" rel="stylesheet">
    
@@ -84,41 +83,35 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
    <div class="conteudoCadastro">
-            <form action="saveEditUser.php" method="POST">
+            <form action="saveEditFuncionarios.php" method="POST">
                 <fieldset>
                     <div class="inputBox">
                         <input type="text" name="nome" id="nome" class="inputUser" value="<?php echo $nome ?>" required>
                         <label for="nome" class="labelInput">Nome completo</label>
                     </div><br>
                     <div class="inputBox">
-                        <input type="email" name="email" id="email" class="inputUser" value="<?php echo $email ?>" required>
-                        <label for="email" class="labelInput">E-mail</label>
+                        <input type="text" name="pis" id="pis" class="inputUser" value="<?php echo $pis ?>" required>
+                        <label for="pis" class="labelInput">PIS/PASEP</label>
                     </div><br>
                     <div class="inputBox">
-                        <input type="password" name="senha" id="senha" class="inputUser" value="<?php echo $senha ?>" required>
-                        <label for="senha" class="labelInput">Senha</label>
-                    </div><br>
-                    <div id="form_registro">Perfil</div>
-                        <select name="perfil" id="perfil" value="<?php echo ($perfil) ?>">
-                            <option value="administrador">Administrador</option>
-                            <option value="usuario">Usuário</option>
-                            <option value="visualizador">Visualizador</option>
-                        </select>
-                    <div class="inputBox">
-                        <label for="data_nascimento"><b>Data de Nascimento</b></label>
-                        <input type="date" name="data_nascimento" id="data_nascimento" class="inputUser" value="<?php echo $data_nasc ?>" required>
+                        <input type="text" name="cpf" id="cpf" class="inputUser" value="<?php echo $cpf ?>" required>
+                        <label for="cpf" class="labelInput">CPF</label>
                     </div><br>
                     <div class="inputBox">
-                        <input type="text" name="cidade" id="cidade" class="inputUser" value="<?php echo $cidade ?>" required>
-                        <label for="cidade" class="labelInput">Cidade</label>
+                        <input type="text" name="empresa" id="empresa" class="inputUser" value="<?php echo $empresa ?>" required>
+                        <label for="empresa" class="labelInput"><b>Empresa</b></label>
                     </div><br>
                     <div class="inputBox">
-                        <input type="text" name="estado" id="estado" class="inputUser" value="<?php echo $estado ?>" required>
-                        <label for="estado" class="labelInput">Estado</label>
+                        <label for="admissao"><b>Data de Admissão</b></label>
+                        <input type="date" name="admissao" id="admissao" class="inputUser" value="<?php echo $admissao ?>" required>
                     </div><br>
                     <div class="inputBox">
-                        <input type="text" name="endereco" id="endereco" class="inputUser" value="<?php echo $endereco ?>" required>
-                        <label for="endereco" class="labelInput">Endereço</label>
+                        <input type="text" name="horario" id="horario" class="inputUser" value="<?php echo $horario ?>" required>
+                        <label for="horario" class="labelInput">Horário</label>
+                    </div><br>
+                    <div class="inputBox">
+                        <input type="text" name="funcao" id="funcao" class="inputUser" value="<?php echo $funcao ?>" required>
+                        <label for="funcao" class="labelInput">Função</label>
                     </div><br>
                     <input type="hidden" name="id" value="<?php echo $id ?>">
                     <input type="submit" name="update" id="update"><br>
