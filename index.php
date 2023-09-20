@@ -31,9 +31,9 @@
             <li><a class="active" href="index.php">Dashboard</a></li>
             <li><a href="#">Cadastros</a>
                 <ul class="dropdown">
-                    <li><a href="cadastro_empresa.html"></a>Empresa</li>
+                    <li><a href="cadastro_empresa.php"></a>Empresa</li>
                     <li><a href="cadastro_horarios.html"></a>Horários</li>
-                    <li><a href="cadastro_funcionarios.html"></a>Funcionários</li>
+                    <li><a href="cadastro_funcionarios.php"></a>Funcionários</li>
                     <li><a href="cadastro_usuarios.php"></a>Usuários</li>
                 </ul>
             </li>
@@ -62,6 +62,7 @@
             <a href="sair.php" id="logout" >Logout</a>          <!--botão de logout-->
         </div>
     </header>
+    
 
     <div class="conteudo">                          <!--Conteudo do site-->
         Conteudo

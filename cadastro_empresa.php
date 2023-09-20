@@ -10,9 +10,11 @@
     }
     $logado = $_SESSION['email'];
 
-    $sql = "SELECT * FROM usuarios ORDER BY id DESC";
+    $sql = "SELECT * FROM empresa ORDER BY id DESC";
 
     $result = $conexao->query($sql);
+
+    ///print_r($result);
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +24,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuários</title>
+    <title>Empresas</title>
     <link rel="stylesheet" href="estilo.css">
     <link href="https://fonts.cdnfonts.com/css/h-hadir-sans" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -30,19 +32,19 @@
 
 <body>
 
-    <nav id="menu"> <!--Menu lateral-->
+    <nav id="menu">                                     <!--Menu lateral-->
         <ul>
            <img src="_imagens/Logo-menu-lateral.png" width="200px">
             <li><a href="index.php">Dashboard</a></li>
             <li><a class="active" href="#">Cadastros</a>
-                <ul>
+                <ul class="dropdown">
                     <li><a href="cadastro_empresa.html"></a>Empresa</li>
                     <li><a href="cadastro_horarios.html"></a>Horários</li>
                     <li><a href="cadastro_funcionarios.html"></a>Funcionários</li>
                     <li><a href="cadastro_usuarios.html"></a>Usuários</li>
                 </ul>
             </li>
-            <li><a href="ajuste_de_ponto.html">Manutenções</a>
+            <li><a href="#">Manutenções</a>
                 <ul>
                     <li><a href="ajuste_de_ponto.html"></a>Ajustar Ponto</li>
                 </ul>
@@ -52,16 +54,14 @@
                     <li><a href="folha_de_ponto.html"></a>Folha de ponto</li>
                 </ul>
             </li>
-            <li>
-                <a href="configuracoes.html">Configurações</a>
-            </li>
+            <li><a href="configuracoes.html">Configurações</a></li>
         </ul>
    </nav>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
    <header>                                        <!--cabeçalho-->
+        <p>Empresas</p>                    <!--Empresas-->
         <form>
-            <p>Usuários</p>
             <input type="text" id="pesquisar" name="pesquisar" placeholder="Pesquisar...">
         </form>
         <div>
@@ -69,14 +69,16 @@
         </div>
     </header>
 
-<div class="conteudo"> <!--lista de usuarios-->
+    <div class="conteudo"> <!--lista de empresas-->
     <table class="table table-bg">
         <thead>
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
-                <th scope="col">Email</th>
-                <th scope="col">Perfil</th>
+                <th scope="col">CNPJ</th>
+                <th scope="col">Endereço</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">Estado</th>
                 <th scope="col">...</th>
 
             </tr>
@@ -88,8 +90,10 @@
                     echo "<tr>";
                     echo "<td>".$user_data['id']."</td>";
                     echo "<td>".$user_data['nome']."</td>";
-                    echo "<td>".$user_data['email']."</td>";
-                    echo "<td>".$user_data['perfil']."</td>";
+                    echo "<td>".$user_data['cnpj']."</td>";
+                    echo "<td>".$user_data['endereco']."</td>";
+                    echo "<td>".$user_data['cidade']."</td>";
+                    echo "<td>".$user_data['estado']."</td>";
                     echo "<td>
                         <a class ='btn btn-sm btn-primary' href='edit_usuarios.php?id=$user_data[id]'>
                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>
@@ -105,4 +109,5 @@
     </table>
 </div>
 </body>
+
 </html>
