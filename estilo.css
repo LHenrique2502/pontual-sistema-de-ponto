@@ -1,336 +1,329 @@
-                                    /*resetar o documento*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/*resetar o documento*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-                                    /*Tela de Login*/
+/*Tela de Login*/
 
 #esquerda {
-    background-color: #141A37;
-    position: fixed;
-    width: 50%;
-    height: 100%;
+  background-color: #141a37;
+  position: fixed;
+  width: 50%;
+  height: 100%;
 }
 
 #img_login {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #direito {
-    background-color: white;
-    position: fixed;
-    width: 50%;
-    height: 100%;
-    right: 0;
+  background-color: white;
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  right: 0;
 }
 
 #cabecalho_login {
-    width: 100%;
-    height: 25%;
-    border-bottom: solid gray;
+  width: 100%;
+  height: 25%;
+  border-bottom: solid gray;
 }
 
 #texto_login {
-    text-align: center;
-    color: rgb(0, 0, 0);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 30px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 #texto_login_2 {
-    text-align: center;
-    color:#00C899;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-    font-size: 15px;
+  text-align: center;
+  color: #00c899;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
 }
 
 #direito_login {
-    position: absolute;
-    height: 16%;
-    padding: 15% 30%;
+  position: absolute;
+  height: 16%;
+  padding: 15% 30%;
 }
 
 #label_login {
-    position: relative;
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(107, 107, 107);
-    font-weight: bolder;
+  position: relative;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(107, 107, 107);
+  font-weight: bolder;
 }
 
 #input_login {
-    width: 70%;
-    position: absolute;
-    padding: 12px;
-    border: 2px solid rgb(184, 182, 182);
-    border-radius: 6px;
-    font-size: 14px;
+  width: 70%;
+  position: absolute;
+  padding: 12px;
+  border: 2px solid rgb(184, 182, 182);
+  border-radius: 6px;
+  font-size: 14px;
 }
 
 #input_senha {
-    width: 70%;
-    position: absolute;
-    padding: 12px;
-    border: 2px solid rgb(184, 182, 182);
-    border-radius: 6px;
-    font-size: 14px;
+  width: 70%;
+  position: absolute;
+  padding: 12px;
+  border: 2px solid rgb(184, 182, 182);
+  border-radius: 6px;
+  font-size: 14px;
 }
 
 #button_login {
-    position: relative;
-    width: 450%;
-    margin-left: 270%;
-    background-color: #00eeb6;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 0px;
+  position: relative;
+  width: 450%;
+  margin-left: 270%;
+  background-color: #00eeb6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 0px;
 }
 
-#button_login:hover{
-    background-color: #00C899;
-    cursor: pointer;
+#button_login:hover {
+  background-color: #00c899;
+  cursor: pointer;
 }
 
-                                    /*Página de registro*/
+/*Página de registro*/
 
-#form_registro{
-    top: none;
+#form_registro {
+  top: none;
 }
 
-#perfil{
-    background: none;
-    border: 1px solid #141A37;
-    border-radius: 5px;
-    padding: 5px;
-    outline: none;
-    color: black;
-    font-size: 12px;
-    width: 20%;
+#perfil {
+  background: none;
+  border: 1px solid #141a37;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  color: black;
+  font-size: 12px;
+  width: 20%;
 }
 
-#direito_registro{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -28%);
-    padding: 10px;
-    border-radius: 15px;
-    width: 70%;
-    height: 100%;
-    color: black;
+#direito_registro {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -28%);
+  padding: 10px;
+  border-radius: 15px;
+  width: 70%;
+  height: 100%;
+  color: black;
 }
 
-fieldset{
-    border: 3px solid white;
+fieldset {
+  border: 3px solid white;
 }
 
-legend{
-    padding: 10px;
-    text-align: center;
-    background-color:#141A37;
-    border-radius: 8px;
-    color: white;
+legend {
+  padding: 10px;
+  text-align: center;
+  background-color: #141a37;
+  border-radius: 8px;
+  color: white;
 }
 
-.inputBox{
-    position: relative;
+.inputBox {
+  position: relative;
 }
 
-.inputUser{
-    background: none;
-    border: none;
-    border: 1px solid #141A37;
-    border-radius: 5px;
-    padding: 12px;
-    outline: none;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    width: 90%;
-    letter-spacing: 2px;
+.inputUser {
+  background: none;
+  border: none;
+  border: 1px solid #141a37;
+  border-radius: 5px;
+  padding: 12px;
+  outline: none;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  width: 90%;
+  letter-spacing: 2px;
 }
 
-.labelInput{
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    transition: .5s;
-    font-size: 14px;
-    margin-left: 5px;
-    margin-top: 5px;
+.labelInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: 0.5s;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-top: 5px;
 }
 
 .inputUser:focus ~ .labelInput, /*animação label*/
-.inputUser:valid ~ .labelInput{
-    top: -19px;
-    font-size: 12px;
-    color: #00C899;
+.inputUser:valid ~ .labelInput {
+  top: -19px;
+  font-size: 12px;
+  color: #00c899;
 }
 
-
-
-#data_nascimento{
-    border: 1px solid #141A37;
-    padding: 8px;
-    border-radius: 10px;
-    outline: none;
-    background-color: white;
-    color: rgb(0, 0, 0);
-    font-size: 12px;
-    width: 20%;
-    margin-left: 10%;
+#data_nascimento {
+  border: 1px solid #141a37;
+  padding: 8px;
+  border-radius: 10px;
+  outline: none;
+  background-color: white;
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  width: 20%;
+  margin-left: 10%;
 }
 
-#submit{
-    width: 60%;
-    background-color: #00eeb6;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 0px;
-    margin-left: 15%;
+#submit {
+  width: 60%;
+  background-color: #00eeb6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 0px;
+  margin-left: 15%;
 }
 
-#submit:hover{
-    background-color: #00C899;
-    cursor: pointer;
+#submit:hover {
+  background-color: #00c899;
+  cursor: pointer;
 }
-                                    /*Formatação do menu*/
+/*Formatação do menu*/
 nav#menu {
-    background-color: #141A37;
-    width: 300px;
-    height:100vh;
-    
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 300px;
+  height: 100%;
+  background-color: #141a37;
 }
 
-nav#menu ul{                        /*Formatação da li menu*/
-    text-align: center;
-    font-family: 'h Hadir Sans', sans-serif;
+nav#menu ul {
+  /*Formatação da li menu*/
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-nav#menu ul li{
-    display: inline;
-    position: relative;
+nav#menu ul li {
+  display: inline;
+  position: relative;
 }
 
 nav#menu li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 20px 15px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 20px 15px;
 }
 
 nav#menu li :hover {
-    background-color: white;
-    color: #141A37;
+  background-color: white;
+  color: #141a37;
 }
 
-                                /*Formatação do dropdown*/
+/*Formatação do dropdown*/
 
 nav#menu ul ul {
-    display: none;
-    position: absolute;
+  display: none;
+  position: absolute;
 }
 
 nav#menu ul li:hover ul {
-    display: inline-block;
-    margin-left: 150px;
-    width: 200px;
-    top: 0;
-    background-color: #141A37;
-    color: white;
+  display: inline-block;
+  margin-left: 60px;
+  width: 200px;
+  top: 0;
+  background-color: #141a37;
+  color: white;
 }
 
-.active {           /*deixa a página que está ativa com uma cor diferente*/
-    background-color: #00C899;
-    color: white;
+.active {
+  /*deixa a página que está ativa com uma cor diferente*/
+  background-color: #00c899;
+  color: white;
 }
 
 img#logo_menu {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
-                                /*Formatação do cabeçalho*/
+/*Formatação do cabeçalho*/
 
 header {
-    position: absolute;
-    top: 0;
-    left: 300px;
-    width: 79%;
-    margin: 10px 0px 0px 10px;
-    border-bottom: 1px red;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-left: 310px;
+  margin-right: 10px;
+  overflow: hidden;
+  justify-content: right;
 }
 
 p {
-    width: 30%;
-    position: absolute;
-    top: 0;
-    left: 0px;
-    font-weight: bolder;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-input#pesquisar {
-    width: 15%;
-    position:absolute;
-    right: 150px;
-    padding: 10px;
-    border: 2px solid rgb(184, 182, 182);
-    border-radius: 6px;
-    font-size: 16px;
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  float: left;
 }
 
 div.conteudo {
-    position: absolute;
-    top: 100px;
-    left: 300px;
-    width: 79%;
-    margin: 10px 0px 0px 10px;
-    background: none;
+  margin-left: 310px;
+  margin-right: 10px;
+  overflow: hidden;
 }
 
-a#logout {
-    background-color: #f55348;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    float: right;
-    border-radius: 10px;
-  }
+#logout {
+  background-color: #f55348;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+}
 
-  div.conteudoCadastro{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-30%, -40%);
-    width: 50%;
-    background: none;
-  }
+div.conteudoCadastro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -40%);
+  width: 50%;
+  background: none;
+}
 
-  #update {
-      position: absolute;
-      width: 30%;
-      margin-left: 30%;
-      background-color: #00eeb6;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      padding: 10px 0px;
-  }
+#update {
+  position: absolute;
+  width: 30%;
+  margin-left: 30%;
+  background-color: #00eeb6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 0px;
+}
 
-  #update:hover{
-      background-color: #00C899;
-      cursor: pointer;
-  }
+#update:hover {
+  background-color: #00c899;
+  cursor: pointer;
+}
+
+#pesquisa {
+  border-radius: 8px;
+  padding-left: 5px;
+}
