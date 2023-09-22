@@ -1,42 +1,42 @@
 <?php
 
-    if(isset($_POST['submit']))
-    {
-        // print_r('Nome:' . $_POST['nome']);
-        // print_r('<br>');
-        // print_r('Email:' . $_POST['email']);
-        // print_r('<br>');
-        // print_r('Senha:' . $_POST['senha']);
-        // print_r('<br>');
-        // print_r('Perfil:' . $_POST['perfil']);
-        // print_r('<br>');
-        // print_r('Data de nascimento:' . $_POST['data_nascimento']);
-        // print_r('<br>');
-        // print_r('Cidade:' . $_POST['cidade']);
-        // print_r('<br>');
-        // print_r('Estado:' . $_POST['estado']);
-        // print_r('<br>');
-        // print_r('Endereço:' . $_POST['endereco']);
+if (isset($_POST['submit'])) {
+    // print_r('Nome:' . $_POST['nome']);
+    // print_r('<br>');
+    // print_r('Email:' . $_POST['email']);
+    // print_r('<br>');
+    // print_r('Senha:' . $_POST['senha']);
+    // print_r('<br>');
+    // print_r('Perfil:' . $_POST['perfil']);
+    // print_r('<br>');
+    // print_r('Data de nascimento:' . $_POST['data_nascimento']);
+    // print_r('<br>');
+    // print_r('Cidade:' . $_POST['cidade']);
+    // print_r('<br>');
+    // print_r('Estado:' . $_POST['estado']);
+    // print_r('<br>');
+    // print_r('Endereço:' . $_POST['endereco']);
 
-        include_once('config.php');
+    include_once('config.php');
 
-        $nome = $_POST['nome'];
-        $email = $_POST['email'];
-        $senha = $_POST['senha'];
-        $perfil = $_POST['perfil'];
-        $data_nasc = $_POST['data_nascimento'];
-        $cidade = $_POST['cidade'];
-        $estado = $_POST['estado'];
-        $endereco = $_POST['endereco'];
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+    $perfil = $_POST['perfil'];
+    $data_nasc = $_POST['data_nascimento'];
+    $cidade = $_POST['cidade'];
+    $estado = $_POST['estado'];
+    $endereco = $_POST['endereco'];
 
-        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,senha,perfil,data_nasc,cidade,estado,endereco) VALUES ('$nome','$email','$senha','$perfil','$data_nasc','$cidade','$estado','$endereco')");
+    $result = mysqli_query($mysqli, "INSERT INTO usuarios(nome,email,senha,perfil,data_nasc,cidade,estado,endereco) VALUES ('$nome','$email','$senha','$perfil','$data_nasc','$cidade','$estado','$endereco')");
 
-        header('Location: login.php');
-    }
+    header('Location: login.php');
+}
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,11 +51,11 @@
 
     <div id="direito">
         <div id="cabecalho_login">
-                <br><br><br>
-                <div id="texto_login">Registre - se</div><br>
-                <div id="texto_login_2">
-                    <a href="login.php">Entre com seu login</a>
-                </div>
+            <br><br><br>
+            <div id="texto_login">Registre - se</div><br>
+            <div id="texto_login_2">
+                <a href="login.php">Entre com seu login</a>
+            </div>
         </div>
 
         <div id="direito_registro">
@@ -75,11 +75,11 @@
                         <label for="senha" class="labelInput">Senha</label>
                     </div><br>
                     <div id="form_registro">Perfil</div>
-                        <select name="perfil" id="perfil">
-                            <option value="administrador">Administrador</option>
-                            <option value="usuario">Usuário</option>
-                            <option value="visualizador">Visualizador</option>
-                        </select>
+                    <select name="perfil" id="perfil">
+                        <option value="administrador">Administrador</option>
+                        <option value="usuario">Usuário</option>
+                        <option value="visualizador">Visualizador</option>
+                    </select>
                     <div class="inputBox">
                         <label for="data_nascimento"><b>Data de Nascimento</b></label>
                         <input type="date" name="data_nascimento" id="data_nascimento" class="inputUser" required>
@@ -102,4 +102,5 @@
         </div>
     </div>
 </body>
+
 </html>

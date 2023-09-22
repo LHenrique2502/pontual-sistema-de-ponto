@@ -14,7 +14,7 @@ if (!empty($_GET['search'])) {
 } else {
     $sql = "SELECT * FROM usuarios ORDER BY id DESC";
 }
-$result = $conexao->query($sql);
+$result = $mysqli->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -54,6 +54,8 @@ $result = $conexao->query($sql);
                 <ul>
                     <li><a href="ajuste_de_ponto.html"></a>Ajustar Ponto</li>
                 </ul>
+            </li>
+            <li><a href="incluir_ponto.php">Incluir Ponto</a>
             </li>
             <li><a href="#">Relatórios</a>
                 <ul>

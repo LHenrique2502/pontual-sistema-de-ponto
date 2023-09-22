@@ -1,11 +1,11 @@
 <?php
 
-    $dbHost = 'Localhost';
-    $dbUsername = 'root';
-    $dbPassword = '';
-    $dbName = 'pontual';
+$dbHost = 'Localhost';
+$dbUsername = 'root';
+$dbPassword = '';
+$dbName = 'pontual';
 
-    $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
+$mysqli = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
     // if($conexao->connect_errno)
     // {
@@ -15,5 +15,3 @@
     // {
     //    echo "Conexão efetuada com sucesso";
     // }
-
-?>

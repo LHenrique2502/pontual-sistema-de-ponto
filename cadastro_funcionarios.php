@@ -11,7 +11,7 @@ $logado = $_SESSION['email'];
 
 $sql = "SELECT * FROM funcionarios ORDER BY id DESC";
 
-$result = $conexao->query($sql);
+$result = $mysqli->query($sql);
 
 ///print_r($result);
 ?>
@@ -54,6 +54,8 @@ $result = $conexao->query($sql);
                     <li><a href="ajuste_de_ponto.html"></a>Ajustar Ponto</li>
                 </ul>
             </li>
+            <li><a href="incluir_ponto.php">Incluir Ponto</a>
+            </li>
             <li><a href="#">Relatórios</a>
                 <ul>
                     <li><a href="folha_de_ponto.html"></a>Folha de ponto</li>
@@ -67,7 +69,7 @@ $result = $conexao->query($sql);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
     <header><!--cabeçalho-->
-        <p>Usuários</p>
+        <p>Funcionários</p>
         <div class="box-search">
             <input type="search" id="pesquisa" name="pesquisar" placeholder="Pesquisar..."><!--barra de pesquisa-->
             <button onclick="searchData()" class="btn btn-primary">

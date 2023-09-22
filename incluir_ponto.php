@@ -1,21 +1,17 @@
 <?php
-session_start();
-// print_r($_SESSION);
-if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)) {
-    unset($_SESSION['email']);
-    unset($_SESSION['senha']);
-    header('Location: login.php');
-}
-$logado = $_SESSION['email'];
-?>
-<!DOCTYPE html>
 
+//Incluir conexão com o banco de dados
+include_once "config.php";
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Incluir Ponto</title>
     <style>
         .box-search {
             display: flex;
@@ -28,12 +24,10 @@ $logado = $_SESSION['email'];
 </head>
 
 <body>
-
-
     <nav id="menu"> <!--Menu lateral-->
         <ul>
             <img src="_imagens/Logo-menu-lateral.png" width="200px">
-            <li><a class="active" href="index.php">Dashboard</a></li>
+            <li><a href="index.php">Dashboard</a></li>
             <li><a href="#">Cadastros</a>
                 <ul>
                     <li><a href="cadastro_empresa.php"></a>Empresa</li>
@@ -47,7 +41,7 @@ $logado = $_SESSION['email'];
                     <li><a href="ajuste_de_ponto.html"></a>Ajustar Ponto</li>
                 </ul>
             </li>
-            <li><a href="incluir_ponto.php">Incluir Ponto</a>
+            <li><a class="active" href="incluir_ponto.php">Incluir Ponto</a>
             </li>
             <li><a href="#">Relatórios</a>
                 <ul>
@@ -62,7 +56,7 @@ $logado = $_SESSION['email'];
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
     <header><!--cabeçalho-->
-        <p>Dashboard</p>
+        <p>Incluir Ponto</p>
         <div class="box-search">
             <input type="search" id="pesquisa" name="pesquisar" placeholder="Pesquisar..."><!--barra de pesquisa-->
             <button onclick="searchData()" class="btn btn-primary">
@@ -74,11 +68,51 @@ $logado = $_SESSION['email'];
         </div>
     </header><!--fim do cabeçalho-->
 
-
     <div class="conteudo"> <!--Conteudo do site-->
-        Conteudo
-    </div>
+        <?php
+        //Receber os dados do formulário
+        $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
+        //Verificar se o usuário clicou no botão cadastrar
+        if (!empty($dados['SendCadHorario'])) {
+            var_dump($dados);
+
+            //Query para cadastrar no banco de dados
+            $query_ponto = "INSERT INTO pontos (entrada, entrada_almoco, saida_almoco, saida) VALUES (:entrada, :entrada_almoco, :saida_almoco, :saida)";
+            $regist_ponto = $mysqli->prepare($query_ponto);
+            $regist_ponto->bind_param(':entrada', $dados['entrada']);
+            $regist_ponto->bind_param(':entrada_almoco', $dados['entrada_almoco']);
+            $regist_ponto->bind_param(':saida_almoco', $dados['saida_almoco']);
+            $regist_ponto->bind_param(':saida', $dados['saida']);
+
+            //Eecutar a QUERY
+            $regist_ponto->execute();
+
+            //Acessa o IF quando cadastrar com sucesso
+            if ($regist_ponto->rowCount()) {
+                echo "<span style='color: green;'>Horário cadastrado com sucesso!</span><br><br>";
+            } else {
+                echo "<span style='color: red;'>Erro: Horário não cadastrado!</span><br><br>";
+            }
+        }
+        ?>
+
+        <form method="POST" action="">
+            <label>Entrada:</label>
+            <input type="time" name="entrada" required><br><br>
+
+            <label>Entrada Almoço:</label>
+            <input type="time" name="entrada_almoco" required><br><br>
+
+            <label>Saída Almoço:</label>
+            <input type="time" name="saida_almoco" required><br><br>
+
+            <label>Saída:</label>
+            <input type="time" name="saida" required><br><br>
+
+            <input type="submit" value="Registrar" name="SendCadHorario">
+        </form>
+    </div>
 </body>
 
 </html>

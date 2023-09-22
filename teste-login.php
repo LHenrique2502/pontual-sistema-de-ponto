@@ -14,7 +14,7 @@ session_start();
 
         $sql = "SELECT * FROM usuarios WHERE email = '$email' and senha = '$senha'";
 
-        $result = $conexao->query($sql);
+        $result = $mysqli->query($sql);
 
         // print_r($sql);
         // print_r($result);
@@ -36,5 +36,3 @@ session_start();
     {
         header('Location: login.php');
     }
-
-?>
